@@ -16,7 +16,7 @@ const Navbar = () => {
         <div>
           <h2 className='font-bold text-[28px] cursor-pointer' onClick={() => navigate('/')}>DevDose</h2>
         </div>
-        <div className='flex gap-4 list-none justify-start'>
+        <div className='flex gap-4 list-none justify-start items-center'>
           <li>
             <Link to='/'>Home</Link>
           </li>
