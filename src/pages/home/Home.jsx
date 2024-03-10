@@ -1,8 +1,25 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Blogcards from '../../Components/blogs/blogcards'
 
 const Home = () => {
-    const vvv = [1,5,7]
+    const [blogs, setBlogs] = useState ([])
+
+    async function fetchBlogs(){
+        const res = await fetch('https://mytaskz.onrender.com/',{
+            method:"GET",
+        })
+
+        const data = await res.json()
+        setBlogs(data)
+        console.log(data)
+    }
+
+    useEffect(() => {
+        fetchBlogs()
+    },[])
+
+
+
   return (
     <>
         <section className='flex items-center justify-between px-[4rem] py-[1rem] bg-slate-400'>
@@ -11,8 +28,8 @@ const Home = () => {
         </section>
         <div className='grid grid-cols-3 gap-10 px-[40px]  py-[20px]'>
             {
-                vvv.map(blog => (
-                    <Blogcards />
+                blogs.map(blog => (
+                    <Blogcards blog={blog}/>
                 ))
             }
         </div>

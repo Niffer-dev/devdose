@@ -22,7 +22,12 @@ const Dropdonwnbox = ({ setShowDropDown }) => {
                 <i class="ri-layout-masonry-fill"></i>
                 <p>Dashboard</p>
             </li>
-            <li className='flex items-center gap-4 cursor-pointer' style={{borderTop: '2px solid black'}}>
+            <li className='flex items-center gap-4 cursor-pointer' style={{borderTop: '2px solid black'}} 
+            onClick={() => {
+                navigate('/login')
+                setShowDropDown(false)
+                localStorage.clear()
+            }}>
                 <i class="ri-logout-box-line"></i>
                 <p>Logout</p>
             </li>

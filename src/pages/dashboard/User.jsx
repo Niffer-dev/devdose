@@ -50,20 +50,23 @@ const User = () => {
           <div>
             <textarea placeholder='create a post' className='outline-none px-[5px] text-black rounded-md' cols="70" rows="9"></textarea>
           </div>
-          <button className='bg-slate-800 text-[#030712] m-auto w-[90%] py-[8px] mt-3 hover:bg-red-700'>POST</button>
+          <button className='bg-slate-800 text-[#030712] m-auto w-[105%] py-[8px] mt-3 hover:bg-red-700'>POST</button>
         </>
       }
       {
         allPost && 
         <div>
-          <div>
+          <div style={{borderTop: '1px solid white'}} className='flex justify-between py-[30px]'>
             <h2>FRANK POST...</h2>
-            <div>
-              <button>EDIT</button>
-              <button>DELETE</button>
+            <div className='flex gap-2'>
+              <button className='bg-white text-black px-[10px] py-[10px] rounded-md'>EDIT</button>
+              <button className='bg-red-700 text-black px-[10px] py-[10px] rounded-md'>DELETE</button>
             </div>
           </div>
-          <button className='bg-slate-800 text-[#030712] m-auto w-[90%] py-[8px] mt-3 hover:bg-red-700'>POST</button>
+          <div className='flex justify-center gap-10'>
+            <button className='bg-slate-800 text-[#030712] py-[8px] mt-3 hover:bg-red-700 px-[10px] rounded-md shadow-gray-50 shadow-sm'>Previous</button>
+            <button className='bg-slate-800 text-[#030712] py-[8px] mt-3 hover:bg-red-700 px-[10px] rounded-md shadow-gray-50 shadow-sm'>Next</button>
+          </div>
         </div>
       }
       {

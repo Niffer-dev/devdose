@@ -23,7 +23,7 @@ function App() {
           <Route path='/dashboard' element={<User />}/>
           <Route path='/login' element={<Login />}/>
           <Route path='/sign-up' element={<Signup />}/>
-          <Route path='/blogdetails' element={<BlogDetails />}/>
+          <Route path='/blogdetails/:id' element={<BlogDetails />}/>
         </Routes>
       </BrowserRouter>
   )
